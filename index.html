@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]>
+<html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]>
+<html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!-->
+<html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Responsive Bookmarklet Generator</title>
+  <meta name="author" content="Lenciel Li">
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="canonical" href="http://lenciel.cn/blog/archives/">
+  <link href="/favicon.png" rel="icon">
+  <link href="css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="css/data-table.css" media="screen, projection" rel="stylesheet" type="text/css"/>
+  <link href="css/bookmarklet.css" media="screen, projection" rel="stylesheet" type="text/css"/>
+  <script src="js/modernizr-2.0.js"></script>
+  <script src="js/ender.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+
+</head>
+
+<body class="collapse-sidebar sidebar-footer">
+<header role="banner">
+  <hgroup>
+    <h1><a href="/">@ZooM</a></h1>
+    <h2>Responsive Web Design/Dev Tools</h2>
+  </hgroup>
+
+</header>
+<nav role="navigation"></nav>
+<div id="main">
+  <div id="content">
+    <div>
+      <article class="hentry" role="article">
+        <header>
+            <h1 class="entry-title">Responsive Bookmarklet Generator</h1>
+        </header>
+
+
+      <div class="entry-content">
+
+        <p>这个工具的核心是<a href="https://twitter.com/#!/lensco">@lensco</a>的<a
+            href="http://bricss.net/post/16538278376/simple-responsive-design-test-page">Simple Responsive Design Test Page。</a>
+        </p>
+
+        <p>使用这个工具只是提供便利，让你可以选择指定的屏幕尺寸，生成一个书签。这样每次你浏览一个网页的时候，只要点击这个书签，就会生成当前网页在这些尺寸的屏幕下浏览的效果。</p>
+
+        <h4>1. Select Device Sizes</h4>
+
+        <div id="bm_generate">
+          <ul class="heading">
+            <li class="col0">&nbsp;</li>
+            <li class="col1">宽 (px)</li>
+            <li class="col2">高 (px)</li>
+            <li class="col3">窗口名</li>
+            <li class="col4 colN del"></li>
+          </ul>
+          <div class="clear"></div>
+          <div class="sortable">
+            <div class="row">
+              <ul>
+                <li class="col0 sort">&nbsp;</li>
+                <li class="col1"><input type="text" value="240"/></li>
+                <li class="col2"><input type="text" value="320"/></li>
+                <li class="col3"><input type="text" value="mobile"/></li>
+                <li class="col4 colN del">x</li>
+              </ul>
+              <div class="clear"></div>
+            </div>
+            <div class="row">
+              <ul>
+                <li class="col0 sort">&nbsp;</li>
+                <li class="col1"><input type="text" value="320"/></li>
+                <li class="col2"><input type="text" value="480"/></li>
+                <li class="col3"><input type="text" value="mobile"/></li>
+                <li class="col4 colN del">x</li>
+              </ul>
+              <div class="clear"></div>
+            </div>
+            <div class="row">
+              <ul>
+                <li class="col0 sort">&nbsp;</li>
+                <li class="col1"><input type="text" value="480"/></li>
+                <li class="col2"><input type="text" value="640"/></li>
+                <li class="col3"><input type="text" value="small tablet"/></li>
+                <li class="col4 colN del">x</li>
+              </ul>
+              <div class="clear"></div>
+            </div>
+            <div class="row">
+              <ul>
+                <li class="col0 sort">&nbsp;</li>
+                <li class="col1"><input type="text" value="768"/></li>
+                <li class="col2"><input type="text" value="1024"/></li>
+                <li class="col3"><input type="text" value="tablet - portrait"/></li>
+                <li class="col4 colN del">x</li>
+              </ul>
+              <div class="clear"></div>
+            </div>
+            <div class="row">
+              <ul>
+                <li class="col0 sort">&nbsp;</li>
+                <li class="col1"><input type="text" value="1024"/></li>
+                <li class="col2"><input type="text" value="768"/></li>
+                <li class="col3"><input type="text" value="tablet - landscape"/></li>
+                <li class="col4 colN del">x</li>
+              </ul>
+              <div class="clear"></div>
+            </div>
+            <div class="row">
+              <ul>
+                <li class="col0 sort">&nbsp;</li>
+                <li class="col1"><input type="text" value="1200"/></li>
+                <li class="col2"><input type="text" value="800"/></li>
+                <li class="col3"><input type="text" value="desktop"/></li>
+                <li class="col4 colN del">x</li>
+              </ul><div class="clear"></div>
+            </div>
+          </div>
+        </div>
+
+
+        <p id="add_row_link">添加更多 &raquo;</p>
+        <h4>2. 生成书签</h4>
+
+        <p>
+          点击按钮后，通过生成的链接可以直接试用书签，要永久保存书签可以拖动下面的书签到你浏览器的toolbar上。
+        </p>
+
+        <span id="generate_btn">点我生成书签</span>
+
+        <p id="bookmarklet_link"></p>
+
+      </div>
+      </article>
+    </div>
+    <aside class="sidebar"></aside>
+  </div>
+</div>
+<footer role="contentinfo">
+  <p>
+    Copyright &copy; 2013 - Zoom Xerus <br/>
+    Theme:
+    <a href="https://github.com/lenciel/octopress-theme-lenciel"> Octopress-Lenciel
+    </a>
+  </p>
+  <section class="contruction-wrap">
+    <div class="contruction"></div>
+  </section>
+</footer>
+
+  <script src="js/bookmarklet.js"></script>
+</body>
+</html>
