@@ -123,6 +123,11 @@
     cursor: pointer;
 }
 
+p#add_row_link{
+    padding: 20px;
+    width: 200px;
+}
+
 #add_row_link:hover {
     text-decoration: underline;
 }
